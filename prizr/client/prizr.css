@@ -1,0 +1,26 @@
+/* CSS declarations go here */
+
+.game .prize {
+    border: 1px dashed black;
+    padding: 10px 30px;
+}
+
+.prize-title {
+    font-size: 20px;
+}
+
+.prize-description {
+    
+}
+
+.prize-rarity {
+    color: cyan;
+}
+
+.prize-picture img {
+    border: 2px solid black;
+}
+
+#qr {
+    border: 3px dashed green;
+}

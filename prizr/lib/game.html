@@ -1,0 +1,42 @@
+<template name="game">
+  {{#with prize}}
+  <!-- game display row -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="blocks">
+      </div>
+    </div>
+  </div>
+  
+  <!-- row with qr code and prize description -->
+  <div class="row">
+    <!-- qr code/payment column -->
+    <div class="col-md-6">
+      <div id="qr">
+        {{qr}}
+      </div>
+      <button type="button" class="btn btn-default btn-lg" id="simulate-purchase">
+        <span class="glyphicon glyphicon-bitcoin" aria-hidden="true"></span> Simulate BTC purchase
+      </button>
+    </div>
+    
+    <!-- prize display column -->
+    <div class="col-md-6">
+      <div class="prize">
+        <div class="prize-title">
+          {{title}}
+        </div>
+        <div class="prize-picture">
+          <img src="{{picture}}" />
+        </div>
+        <div class="prize-description">
+          {{description}} - progress: {{blocks}}
+        </div>
+        <div class="prize-rarity">
+          rarity: {{rarity}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/with}}
+</template>

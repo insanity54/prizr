@@ -1,0 +1,37 @@
+<template name="games">
+  <div class="row">
+    {{#if prizes}}
+      {{#each prizes}}
+        <div class="col-md-2">
+          <div class="game">
+            <div class="prize-title">
+              {{title}}
+            </div>
+            <div class="prize-picture">
+              <a href="{{pathFor route='game.show' _id=getId}}"><img src="{{picture}}" /></a>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{blockProgress}}" aria-valuemin="0" aria-valuemax="{{blocksToWin}}" style="width: {{progressWidth}}%">
+                <span class="sr-only">{{progress}}% Complete</span>
+              </div>
+            </div>
+            <div class="prize-description">
+              {{description}}
+            </div>
+            <div class="prize-rarity">
+              rarity: {{rarity}}
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
+      <div class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        Sorry, there are no prizes available! Check back later or follow us on <a href="http://twitter.com/prizewall@todo">Twitter</a> for instant alerts!
+      </div>
+    {{/if}}
+  </div>
+  
+
+</template>
